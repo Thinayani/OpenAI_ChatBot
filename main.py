@@ -1,8 +1,7 @@
 import openai
 
-# with open('hidden.txt') as file:
-    
-openai.api_key = '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'
+with open('hidden.txt') as file:    
+  openai.api_key = file.read()
 
 def get_api_response(messages: str) -> str | None:
     text: str | None = None
